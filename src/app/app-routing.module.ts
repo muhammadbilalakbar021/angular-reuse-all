@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'auth',
     component: AuthComponent,
-    children:[
+    children: [
       {
         'path': 'login',
         component: LoginComponent
@@ -34,8 +34,8 @@ const routes: Routes = [
     canActivate: [AuthGuardGuard],
     path: 'vehicle',
     component: VehicleComponent,
-    canActivateChild: [AuthGuardGuard],
-    children:[
+    // canActivateChild: [AuthGuardGuard],
+    children: [
       {
         path: 'bike',
         component: BikeComponent

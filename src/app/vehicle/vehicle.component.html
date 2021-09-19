@@ -1,2 +1,37 @@
-<p>vehicle works!</p>
-<router-outlet></router-outlet>
+<p>vehicle {{projectName}}!</p>
+<h2>List of Customers</h2>
+
+<table class='table'>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles;">
+            <td>{{vehicle.vehicleNo}}</td>
+            <td>{{vehicle.name}}</td>
+            <td>{{vehicle.address}}</td>
+            <td>{{vehicle.city}}</td>
+            <td>{{vehicle.state}}</td>
+            <td>{{vehicle.country}}</td>
+            <td><button (click)="showDetails(vehicle)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Details</h3>
+<app-bike [vehicle]="selectedCustomer" (vehicleChanged)="update($event)"></app-bike>
+<!-- <router-outlet></router-outlet> -->
+
+<br>
+<br><br><br>
+<div *ngIf="eventPassed">
+    <app-car [vehicle]="vehicle" (vehicleChangedCar)="update($event)"></app-car>
+</div>

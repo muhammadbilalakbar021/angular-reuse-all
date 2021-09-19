@@ -1,1 +1,9 @@
 <p>car works!</p>
+
+<p>Customer No : {{vehicle.vehicleNo}}</p>
+<p>Name : {{vehicle.name}}</p>
+<p>Address : {{vehicle.address}}</p>
+<p>City : {{vehicle.city}}</p>
+<p>state : <input [(ngModel)]="vehicle.state"></p>
+<p>country : <input [(ngModel)]="vehicle.country"></p>
+<button (click)="update()">Update</button>

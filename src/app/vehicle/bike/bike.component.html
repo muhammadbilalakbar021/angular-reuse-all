@@ -1,1 +1,10 @@
 <p>bike works!</p>
+
+<p>Customer No : {{vehicle.vehicleNo}}</p>
+<p>Name : <input [(ngModel)]="vehicle.name"></p>
+<p>Address : <input [(ngModel)]="vehicle.address"></p>
+<p>city : <input [(ngModel)]="vehicle.city"></p>
+<p>state : <input [(ngModel)]="vehicle.state"></p>
+<p>country : <input [(ngModel)]="vehicle.country"></p>
+
+<button (click)="update()">Update</button>

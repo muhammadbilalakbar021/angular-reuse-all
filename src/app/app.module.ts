@@ -13,6 +13,7 @@ import { CarComponent } from './vehicle/car/car.component';
 import { BikeComponent } from './vehicle/bike/bike.component';
 import { TruckComponent } from './vehicle/truck/truck.component';
 import { CartComponent } from './cart/cart.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartComponent } from './cart/cart.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
